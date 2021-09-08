@@ -1,4 +1,4 @@
-package igor.testebot.commands;
+package igor.testebot.listeners;
 
 
 import net.dv8tion.jda.api.events.ReadyEvent;

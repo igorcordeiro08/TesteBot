@@ -1,8 +1,10 @@
 package igor.testebot.main;
 
-import igor.testebot.commands.readyListener;
+import igor.testebot.commands.CmdHelp;
+import igor.testebot.commands.CmdPing;
+import igor.testebot.core.commandHandler;
+import igor.testebot.listeners.readyListener;
 import igor.testebot.core.messageListener;
-import net.dv8tion.jda.api.AccountType;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -16,12 +18,14 @@ public class Main {
 
 
     public static void main(String[] args) throws LoginException {
-        String token="ODc4Njc2MDIwNjA0MDU5Njg4.YSEo0A.Bzw9tsc58ocb5D34MViXA-C2DTA";
+        String token="ODc4Njc2MDIwNjA0MDU5Njg4.YSEo0A.5H90d-gSsU88GT-nRcaGQiVhKCg";
         jda= JDABuilder.create(token, EnumSet.allOf(GatewayIntent.class)).build();
 
         jda.addEventListener(new readyListener());
         jda.addEventListener(new messageListener());
 
+        commandHandler.commands.put("help", new CmdHelp());
+        commandHandler.commands.put("ping", new CmdPing());
 
 
     }
