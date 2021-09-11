@@ -14,6 +14,7 @@ public class CmdPlay implements Command {
                 " Foi adicionada à fila"
         ).queue();;
         return false;
+        // TODO: This command should take the song name and add it to the array of songs along with it's info from the API
     }
 
     @Override
