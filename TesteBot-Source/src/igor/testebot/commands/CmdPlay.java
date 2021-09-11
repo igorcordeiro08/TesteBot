@@ -2,7 +2,9 @@ package igor.testebot.commands;
 
 import igor.testebot.core.Command;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+
 import java.util.ArrayList;
+import java.String.split;
 
 public class CmdPlay implements Command {
 
@@ -10,7 +12,7 @@ public class CmdPlay implements Command {
     @Override
     public boolean called(String[] args, MessageReceivedEvent event) {
         String MsgContent = event.getMessage().getContentRaw();
-        private ArrayList<String> Title = msg.split(" ");
+        ArrayList<String> Title = msg.split(" ");
         Title.remove(0);
         MsgContent = String.join(", ", Title);
         event.getTextChannel().sendMessage("A música "+
