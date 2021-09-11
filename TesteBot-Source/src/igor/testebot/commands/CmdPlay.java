@@ -8,7 +8,10 @@ public class CmdPlay implements Command {
 
     @Override
     public boolean called(String[] args, MessageReceivedEvent event) {
-        String MsgContent = event.getMessage().getContentBeheaded();
+        String MsgContent = event.getMessage().getContentRaw();
+        private ArrayList<String> Title = new ArrayList<String>();
+        Title.remove(0);
+        MsgContent = String.join(", ", Title);
         event.getTextChannel().sendMessage("A música "+
                 MsgContent+
                 " Foi adicionada à fila"
