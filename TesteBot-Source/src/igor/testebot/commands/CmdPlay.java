@@ -9,9 +9,9 @@ public class CmdPlay implements Command {
     @Override
     public boolean called(String[] args, MessageReceivedEvent event) {
         String MsgContent = event.getMessage().getContentRaw();
-        event.getTextChannel().sendMessage("A música"+
+        event.getTextChannel().sendMessage("A música "+
                 MsgContent+
-                "Foi adicionada à fila"
+                " Foi adicionada à fila"
         ).queue();;
         return false;
     }
