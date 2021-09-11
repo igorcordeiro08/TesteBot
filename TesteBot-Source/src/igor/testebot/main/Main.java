@@ -29,8 +29,8 @@ public class Main {
 
         commandHandler.commands.put("help", new CmdHelp());
         commandHandler.commands.put("ping", new CmdPing());
-        commandHandler.commands.put("ping", new CmdPlay());
-        commandHandler.commands.put("ping", new CmdRemove());
+        commandHandler.commands.put("play", new CmdPlay());
+        commandHandler.commands.put("remove", new CmdRemove());
 
     }
 }
