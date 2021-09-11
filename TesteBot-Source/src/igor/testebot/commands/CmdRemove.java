@@ -10,7 +10,7 @@ public class CmdRemove implements Command {
     @Override
     public boolean called(String[] args, MessageReceivedEvent event) {
         String MsgContent = event.getMessage().getContentRaw();
-        private ArrayList<String> Title = new ArrayList<String>();
+        private ArrayList<String> Title = msg.split(" ");
         Title.remove(0);
         MsgContent = String.join(", ", Title);
         event.getTextChannel().sendMessage("A música "+
