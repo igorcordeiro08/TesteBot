@@ -8,7 +8,7 @@ public class CmdRemove implements Command {
 
     @Override
     public boolean called(String[] args, MessageReceivedEvent event) {
-        String MsgContent = event.getMessage().getContentRaw();
+        String MsgContent = event.getMessage().getContentBeheaded();
         event.getTextChannel().sendMessage("A música "+
                 MsgContent+
                 " Foi adicionada à fila"
