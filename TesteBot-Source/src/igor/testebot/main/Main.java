@@ -2,9 +2,12 @@ package igor.testebot.main;
 
 import igor.testebot.commands.CmdHelp;
 import igor.testebot.commands.CmdPing;
+import igor.testebot.commands.CmdPlay;
+import igor.testebot.commands.CmdRemove;
 import igor.testebot.core.commandHandler;
-import igor.testebot.listeners.readyListener;
 import igor.testebot.core.messageListener;
+import igor.testebot.listeners.readyListener;
+
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.requests.GatewayIntent;
@@ -26,7 +29,8 @@ public class Main {
 
         commandHandler.commands.put("help", new CmdHelp());
         commandHandler.commands.put("ping", new CmdPing());
-
+        commandHandler.commands.put("ping", new CmdPlay());
+        commandHandler.commands.put("ping", new CmdRemove());
 
     }
 }
