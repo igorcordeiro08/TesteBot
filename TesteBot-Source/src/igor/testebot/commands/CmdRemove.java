@@ -8,10 +8,13 @@ public class CmdRemove implements Command {
 
     @Override
     public boolean called(String[] args, MessageReceivedEvent event) {
-        String MsgContent = event.getMessage().getContentBeheaded();
+        String MsgContent = event.getMessage().getContentRaw();
+        private ArrayList<String> Title = new ArrayList<String>();
+        Title.remove(0);
+        MsgContent = String.join(", ", Title);
         event.getTextChannel().sendMessage("A música "+
                 MsgContent+
-                " Foi adicionada à fila"
+                " Foi removida da fila"
         ).queue();;
         return false;
         // TODO: This command should take the song name and remove it from the array of songs along with it's info from the API
