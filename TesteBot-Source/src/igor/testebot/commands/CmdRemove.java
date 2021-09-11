@@ -2,6 +2,7 @@ package igor.testebot.commands;
 
 import igor.testebot.core.Command;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
+import java.util.ArrayList;
 
 public class CmdRemove implements Command {
 
