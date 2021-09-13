@@ -21,7 +21,7 @@ public class Main {
 
 
     public static void main(String[] args) throws LoginException {
-        String token="ODc4Njc2MDIwNjA0MDU5Njg4.YSEo0A.5H90d-gSsU88GT-nRcaGQiVhKCg";
+        String token="bot-token-here";
         jda= JDABuilder.create(token, EnumSet.allOf(GatewayIntent.class)).build();
 
         jda.addEventListener(new readyListener());
