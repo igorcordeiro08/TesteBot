@@ -11,7 +11,7 @@ public class CmdPlay implements Command {
     @Override
     public boolean called(String[] args, MessageReceivedEvent event) {
         String msg = event.getMessage().getContentRaw();
-        ArrayList<String> MsgContent = msg.split(" ");
+        ArrayList<String> MsgContent = new ArrayList<>(msg.split(" "));
         MsgContent.remove(0);
         Title = String.join(",", Title);
         event.getTextChannel().sendMessage("A música "+
