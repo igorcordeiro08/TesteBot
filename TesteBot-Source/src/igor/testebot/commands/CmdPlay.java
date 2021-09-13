@@ -13,7 +13,7 @@ public class CmdPlay implements Command {
         String msg = event.getMessage().getContentRaw();
         ArrayList<String> MsgContent = new ArrayList<>(msg.split(" "));
         MsgContent.remove(0);
-        Title = String.join(",", Title);
+        String Title = String.join(",", Title);
         event.getTextChannel().sendMessage("A música "+
                 Title+
                 " Foi adicionada à fila"
