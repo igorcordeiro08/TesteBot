@@ -4,8 +4,6 @@ import igor.testebot.core.Command;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.util.ArrayList;
-import java.String.split;
-import Array.prototype.join();
 
 public class CmdRemove implements Command {
 
