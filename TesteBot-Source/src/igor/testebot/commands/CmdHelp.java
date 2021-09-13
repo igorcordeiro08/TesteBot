@@ -10,7 +10,9 @@ public class CmdHelp implements Command {
     public boolean called(String[] args, MessageReceivedEvent event) {
         event.getTextChannel().sendMessage("**Comandos**"+
                 "\n '!help'- Mostra isso"+
-                "\n '!ping'- Mostra o ping do bot"
+                "\n '!ping'- Mostra o ping do bot"+
+                "\n '!play'- toca a musica"+
+                "\n '!remove'- remove a musica"
         ).queue();;
         return false;
     }

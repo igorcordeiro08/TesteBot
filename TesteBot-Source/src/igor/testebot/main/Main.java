@@ -2,6 +2,8 @@ package igor.testebot.main;
 
 import igor.testebot.commands.CmdHelp;
 import igor.testebot.commands.CmdPing;
+import igor.testebot.commands.CmdPlay;
+import igor.testebot.commands.CmdRemove;
 import igor.testebot.core.commandHandler;
 import igor.testebot.listeners.readyListener;
 import igor.testebot.core.messageListener;
@@ -18,7 +20,7 @@ public class Main {
 
 
     public static void main(String[] args) throws LoginException {
-        String token="ODc4Njc2MDIwNjA0MDU5Njg4.YSEo0A.5H90d-gSsU88GT-nRcaGQiVhKCg";
+        String token="ODc4Njc2MDIwNjA0MDU5Njg4.YSEo0A.rPUHiCgzzcMtapJkf6GJulrlVKU";
         jda= JDABuilder.create(token, EnumSet.allOf(GatewayIntent.class)).build();
 
         jda.addEventListener(new readyListener());
@@ -26,6 +28,8 @@ public class Main {
 
         commandHandler.commands.put("help", new CmdHelp());
         commandHandler.commands.put("ping", new CmdPing());
+        commandHandler.commands.put("play", new CmdPlay());
+        commandHandler.commands.put("remove", new CmdRemove());
 
 
     }
