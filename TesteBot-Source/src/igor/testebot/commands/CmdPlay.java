@@ -4,6 +4,7 @@ import igor.testebot.core.Command;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CmdPlay implements Command {
 
@@ -11,9 +12,9 @@ public class CmdPlay implements Command {
     @Override
     public boolean called(String[] args, MessageReceivedEvent event) {
         String msg = event.getMessage().getContentRaw();
-        ArrayList<String> MsgContent = new ArrayList<>(msg.split(" "));
+        ArrayList<String> MsgContent = new ArrayList<>(Arrays.asList(msg.split(" ")));
         MsgContent.remove(0);
-        String Title = String.join(",", MsgContent);
+        String Title = String.join(" ", MsgContent);
         event.getTextChannel().sendMessage("A música "+
                 Title+
                 " Foi adicionada à fila"
